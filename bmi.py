@@ -1,4 +1,6 @@
 def calculate_bmi(weight, height):
+    if weight <= 0 or height <= 0:
+        raise ValueError("體重和身高必須大於0")
     return weight / (height ** 2)
 
 def bmi_category(bmi):
